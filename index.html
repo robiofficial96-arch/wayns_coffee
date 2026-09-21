@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wayns Coffee | واينز كافيه - Saudi Arabia Specialty Coffee & Royal Gahwa</title>
+  <meta name="description" content="Wayns Coffee: The pinnacle of Saudi coffee culture. Experience authentic Saudi Gahwa with Medina dates and champion specialty espresso in Riyadh, Jeddah, and Khobar.">
+  <link rel="icon" type="image/svg+xml" href="wayns logo.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=Outfit:wght@700;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            wayns: {
+              green: '#04300d',
+              dark: '#0c1a0e',
+              lightgreen: '#234827',
+              canvas: '#FAF7F2',
+              crema: '#F4EFEA',
+              cremasoft: '#FAF8F5',
+              sand: '#EAE5DC',
+              bronze: '#B8976C',
+              surface: '#FFFFFF'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+            cairo: ['Cairo', 'sans-serif'],
+            amiri: ['Amiri', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome 6 Icons -->
+  <!-- Lucide Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#FAF7F2] text-[#141C15] antialiased selection:bg-[#04300d] selection:text-white pb-20 md:pb-0">
+
+      <!-- ================= TOP ANNOUNCEMENT BAR ================= -->
+  <div class="hidden md:block bg-[#F4EFEA] text-[#141C15] text-xs py-2 px-4 border-b border-[#EAE5DC] transition-all">
+    <div class="max-w-7xl mx-auto flex justify-between items-center gap-4">
+      
+      <!-- Announcement with primary green pulsing dot -->
+      <div class="flex items-center gap-2.5">
+        <span class="inline-flex items-center justify-center w-2 h-2 rounded-full bg-[#04300d] animate-pulse"></span>
+        <span class="font-medium text-[#04300d] tracking-tight" data-i18n="topbarAnnouncement">
+          Experience Royal Saudi Hospitality & Artisanal Specialty Coffee | Riyadh • Jeddah • Khobar
+        </span>
+      </div>
+
+      <!-- Operating Hours & Contact Phone -->
+      <div class="flex items-center gap-4 text-[11px] text-[#526055]">
+        <span class="inline-flex items-center gap-1.5 font-medium">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-[#04300d] inline-block align-middle"></i>
+          <span data-i18n="topbarHours">Daily: 6:00 AM – 1:30 AM</span>
+        </span>
+        <span class="text-[#D4CCC0]">•</span>
+        <a href="tel:+966114567890" class="hover:text-[#04300d] transition-colors flex items-center gap-1.5 font-medium">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-[#04300d] inline-block align-middle"></i>
+          <span dir="ltr" data-i18n="topbarContact">+966 11 456 7890</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= STICKY HEADER & NAVBAR (Centered Logo, Clean & Pure) ================= -->
+  <header id="main-header" class="sticky top-0 z-40 w-full transition-all duration-300 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#04300d]/10 py-3 sm:py-3.5 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Desktop Navigation (3-Column Layout: Left Links | Center Logo | Right Links + Action) -->
+      <div class="hidden lg:grid lg:grid-cols-3 items-center">
+        
+        <!-- Left Nav Links -->
+        <nav class="flex items-center gap-8 text-sm">
+          <a href="index.html" class="text-[#04300d] font-bold after:content-[''] after:absolute after:bottom-0 after:start-0 after:w-full after:h-[2px] after:bg-[#04300d] py-1 relative transition-colors" data-i18n="navHome">Home</a>
+          <a href="menu.html" class="text-[#141C15] font-semibold hover:text-[#04300d] after:content-[''] after:absolute after:bottom-0 after:start-0 after:w-0 after:h-[2px] after:bg-[#04300d] hover:after:w-full after:transition-all py-1 relative transition-colors" data-i18n="navMenu">Menu</a>
+          <a href="branch.html" class="text-[#141C15] font-semibold hover:text-[#04300d] after:content-[''] after:absolute after:bottom-0 after:start-0 after:w-0 after:h-[2px] after:bg-[#04300d] hover:after:w-full after:transition-all py-1 relative transition-colors" data-i18n="navBranch">Branch</a>
+        </nav>
+
+        <!-- Center Brand Logo (Large & Prominent) -->
+        <div class="flex justify-center items-center">
+          <a href="index.html" class="flex items-center group py-1 focus:outline-none">
+            <img src="wayns logo.svg" alt="Wayns Coffee Logo" class="h-14 sm:h-16 lg:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+          </a>
+        </div>
+
+        <!-- Right Nav Links + Action Pill -->
+        <div class="flex items-center justify-end gap-7 text-sm">
+          <a href="location.html" class="text-[#141C15] font-semibold hover:text-[#04300d] after:content-[''] after:absolute after:bottom-0 after:start-0 after:w-0 after:h-[2px] after:bg-[#04300d] hover:after:w-full after:transition-all py-1 relative transition-colors" data-i18n="navLocation">Location</a>
+          <a href="contact.html" class="text-[#141C15] font-semibold hover:text-[#04300d] after:content-[''] after:absolute after:bottom-0 after:start-0 after:w-0 after:h-[2px] after:bg-[#04300d] hover:after:w-full after:transition-all py-1 relative transition-colors" data-i18n="navContact">Contact</a>
+          <a href="menu.html" class="btn-gold px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm flex items-center gap-2">
+            <i data-lucide="coffee" class="w-4 h-4"></i>
+            <span data-i18n="heroBtnExplore">Explore Menu</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Mobile Header (Logo Centered, Zero Burger Icon) -->
+      <div class="lg:hidden flex items-center justify-center py-1">
+        <a href="index.html" class="flex items-center focus:outline-none">
+          <img src="wayns logo.svg" alt="Wayns Coffee Logo" class="h-12 sm:h-14 w-auto object-contain">
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+<!-- ================= HERO SECTION ================= -->
+
+  <!-- ── MOBILE HERO (Phone Only) — image full background, text overlaid on top ── -->
+  <section class="lg:hidden relative overflow-hidden border-b border-[#EAE5DC]"
+           style="min-height:92svh; background-image:url('hero_phone_view.png'); background-size:cover; background-position:center 88%;">
+
+    <!-- Ultra-light top scrim for crisp text contrast without muting image colors -->
+    <div class="absolute inset-0 pointer-events-none" style="background:linear-gradient(to bottom, rgba(250,247,242,0.65) 0%, rgba(250,247,242,0.2) 28%, transparent 40%);"></div>
+
+    <!-- Content overlaid on image -->
+    <div class="relative z-10 px-5 pt-6 pb-2 text-center space-y-2.5">
+
+      <!-- Headline — two fonts -->
+      <h1 class="text-3xl leading-tight tracking-tight" style="color:#04300d;">
+        <span class="block font-black" style="font-family:'Plus Jakarta Sans',sans-serif;" data-i18n="heroTitleLine1">Where Saudi Heritage</span>
+        <span class="block font-bold italic" style="font-family:'Playfair Display',serif; font-size:1.15em;" data-i18n="heroTitleLine2">Meets Specialty Coffee</span>
+      </h1>
+
+      <!-- Short description -->
+      <p class="text-xs leading-relaxed max-w-xs mx-auto" style="color:#2a4030;">
+        <span data-i18n="heroSubtitle">Immerse in the timeless ritual of Saudi Gahwa and masterfully roasted single-origin Arabica.</span>
+      </p>
+
+      <!-- Explore Menu Button -->
+      <div class="pt-1">
+        <a href="menu.html" class="btn-gold inline-flex items-center gap-2 px-7 py-3 rounded-full text-xs font-bold uppercase tracking-wider shadow-md">
+          <i data-lucide="coffee" class="w-3.5 h-3.5"></i>
+          <span data-i18n="heroBtnExplore">Explore Menu</span>
+        </a>
+      </div>
+
+      <!-- 3 Category Icons -->
+      <div class="flex items-center justify-center gap-10 pt-5">
+
+        <!-- COFFEE -->
+        <a href="menu.html?cat=coffee" class="flex flex-col items-center gap-1.5">
+          <svg class="icon-coffee" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#04300d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 8h1a4 4 0 1 1 0 8h-1"/>
+            <path d="M3 8h14v7a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/>
+            <line class="steam-line" x1="6.5" y1="3.5" x2="6.5" y2="5.5"/>
+            <line class="steam-line" x1="10" y1="2.5" x2="10" y2="4.5"/>
+            <line class="steam-line" x1="13.5" y1="3.5" x2="13.5" y2="5.5"/>
+          </svg>
+          <span class="text-[10px] font-black tracking-widest uppercase" style="color:#04300d;" data-i18n="heroCatCoffee">COFFEE</span>
+        </a>
+
+        <!-- SWEETS -->
+        <a href="menu.html?cat=sweets" class="flex flex-col items-center gap-1.5">
+          <svg class="icon-sweets" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#04300d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/>
+            <path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/>
+            <path d="M2 21h20"/>
+            <path d="M7 11V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v4"/>
+            <line x1="12" y1="5" x2="12" y2="2"/>
+          </svg>
+          <span class="text-[10px] font-black tracking-widest uppercase" style="color:#04300d;" data-i18n="heroCatSweets">SWEETS</span>
+        </a>
+
+        <!-- TEA -->
+        <a href="menu.html?cat=tea" class="flex flex-col items-center gap-1.5">
+          <svg class="icon-tea" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#04300d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Cup Body -->
+            <path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8Z"/>
+            <!-- Cup Handle -->
+            <path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17"/>
+            <!-- Saucer Base -->
+            <path d="M2 21h17"/>
+            <!-- Hanging Tea Bag String & Tag -->
+            <path class="tea-tag" d="M10 8v4l2 1.5"/>
+            <rect class="tea-tag" x="10.5" y="13.5" width="3" height="3.5" rx="0.5" fill="#04300d"/>
+            <!-- Delicate Steam -->
+            <path d="M8 3c0 1.5-1 2-1 3.5" stroke-dasharray="1 1"/>
+            <path d="M12 2c0 1.5-1 2-1 4" stroke-dasharray="1 1"/>
+          </svg>
+          <span class="text-[10px] font-black tracking-widest uppercase" style="color:#04300d;" data-i18n="heroCatTea">TEA</span>
+        </a>
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ── DESKTOP HERO (lg+: Full background, text on left) ── -->
+  <section id="hero" class="hidden lg:flex hero-dual-bg relative min-h-[88vh] items-center overflow-hidden border-b border-[#EAE5DC] text-[#141C15] pb-16">
+
+    <!-- Left-side reading scrim for crisp text -->
+    <div class="absolute inset-0 bg-gradient-to-r from-[#FAF7F2]/90 via-[#FAF7F2]/50 to-transparent pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+      <div class="max-w-2xl space-y-7">
+
+        <!-- Title — two fonts -->
+        <h1 class="text-5xl lg:text-6xl leading-[1.1] text-[#04300d]">
+          <span class="block font-black tracking-tight" style="font-family:'Plus Jakarta Sans',sans-serif;" data-i18n="heroTitleLine1">Where Saudi Heritage</span>
+          <span class="block font-bold italic" style="font-family:'Playfair Display',serif;" data-i18n="heroTitleLine2">Meets Specialty Coffee</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-lg text-[#324035] leading-relaxed" data-i18n="heroSubtitle">
+          Immerse in the timeless ritual of Saudi Gahwa and masterfully roasted single-origin Arabica. Crafted with the spirit of Saudi Hafawah (authentic hospitality) in the heart of Riyadh.
+        </p>
+
+        <!-- CTA Button -->
+        <div>
+          <a href="menu.html" class="btn-gold inline-flex items-center gap-2.5 px-9 py-4 rounded-full text-sm font-bold uppercase tracking-wider shadow-md">
+            <i data-lucide="coffee" class="w-4 h-4"></i>
+            <span data-i18n="heroBtnExplore">Explore Menu</span>
+          </a>
+        </div>
+
+        <!-- 3 Category Badges (Desktop) — no box -->
+        <div class="flex items-center gap-10 pt-2">
+
+          <!-- COFFEE -->
+          <a href="menu.html?cat=coffee" class="flex flex-col items-center gap-2 group transition-transform duration-200 hover:scale-110">
+            <svg class="icon-coffee" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#04300d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 8h1a4 4 0 1 1 0 8h-1"/>
+              <path d="M3 8h14v7a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/>
+              <line class="steam-line" x1="6.5" y1="3.5" x2="6.5" y2="5.5"/>
+              <line class="steam-line" x1="10" y1="2.5" x2="10" y2="4.5"/>
+              <line class="steam-line" x1="13.5" y1="3.5" x2="13.5" y2="5.5"/>
+            </svg>
+            <span class="text-xs font-black tracking-widest text-[#04300d] uppercase" data-i18n="heroCatCoffee">COFFEE</span>
+          </a>
+
+          <!-- SWEETS -->
+          <a href="menu.html?cat=sweets" class="flex flex-col items-center gap-2 group transition-transform duration-200 hover:scale-110">
+            <svg class="icon-sweets" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#04300d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/>
+              <path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/>
+              <path d="M2 21h20"/>
+              <path d="M7 11V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v4"/>
+              <line x1="12" y1="5" x2="12" y2="2"/>
+            </svg>
+            <span class="text-xs font-black tracking-widest text-[#04300d] uppercase" data-i18n="heroCatSweets">SWEETS</span>
+          </a>
+
+          <!-- TEA -->
+          <a href="menu.html?cat=tea" class="flex flex-col items-center gap-2 group transition-transform duration-200 hover:scale-110">
+            <svg class="icon-tea" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#04300d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Cup Body -->
+              <path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8Z"/>
+              <!-- Cup Handle -->
+              <path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17"/>
+              <!-- Saucer Base -->
+              <path d="M2 21h17"/>
+              <!-- Hanging Tea Bag String & Tag -->
+              <path class="tea-tag" d="M10 8v4l2 1.5"/>
+              <rect class="tea-tag" x="10.5" y="13.5" width="3" height="3.5" rx="0.5" fill="#04300d"/>
+              <!-- Delicate Steam -->
+              <path d="M8 3c0 1.5-1 2-1 3.5" stroke-dasharray="1 1"/>
+              <path d="M12 2c0 1.5-1 2-1 4" stroke-dasharray="1 1"/>
+            </svg>
+            <span class="text-xs font-black tracking-widest text-[#04300d] uppercase" data-i18n="heroCatTea">TEA</span>
+          </a>
+
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ================= MOVING TICKER RIBBON (Half on hero, half outside) ================= -->
+  <div class="relative w-full overflow-hidden bg-[#04300d] text-[#FAF7F2] py-3 sm:py-3.5 border-y-2 border-[#B8976C] shadow-2xl select-none z-30 -mt-6 sm:-mt-7">
+    <div class="specialist-marquee-track flex items-center gap-8 sm:gap-12 text-xs sm:text-sm font-bold tracking-widest uppercase">
+      
+      <!-- Group 1 -->
+      <div class="flex items-center gap-8 sm:gap-12 flex-shrink-0">
+        <span class="flex items-center gap-3">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8976C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v7a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/>
+          </svg>
+          <span data-i18n="tickerSpecialistText">TEA & COFFEE SPECIALIST</span>
+        </span>
+        <span class="text-[#B8976C] text-xs">✦</span>
+
+        <span class="flex items-center gap-3">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8976C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8Z"/><path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M2 21h17"/>
+          </svg>
+          <span data-i18n="tickerSpecialistText">TEA & COFFEE SPECIALIST</span>
+        </span>
+        <span class="text-[#B8976C] text-xs">✦</span>
+
+        <span class="flex items-center gap-3">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8976C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L9 8.5h6L12 2z"/><path d="M5 13a7 7 0 0 0 14 0c0-4-7-10-7-10s-7 6-7 10z"/>
+          </svg>
+          <span data-i18n="tickerSpecialistText">TEA & COFFEE SPECIALIST</span>
+        </span>
+        <span class="text-[#B8976C] text-xs">✦</span>
+
+        <span class="flex items-center gap-3">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8976C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v7a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/>
+          </svg>
+          <span data-i18n="tickerSpecialistText">TEA & COFFEE SPECIALIST</span>
+        </span>
+        <span class="text-[#B8976C] text-xs">✦</span>
+      </div>
+
+      <!-- Group 2 (Duplicate for Seamless Loop) -->
+      <div class="flex items-center gap-8 sm:gap-12 flex-shrink-0" aria-hidden="true">
+        <span class="flex items-center gap-3">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8976C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v7a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/>
+          </svg>
+          <span data-i18n="tickerSpecialistText">TEA & COFFEE SPECIALIST</span>
+        </span>
+        <span class="text-[#B8976C] text-xs">✦</span>
+
+        <span class="flex items-center gap-3">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8976C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8Z"/><path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M2 21h17"/>
+          </svg>
+          <span data-i18n="tickerSpecialistText">TEA & COFFEE SPECIALIST</span>
+        </span>
+        <span class="text-[#B8976C] text-xs">✦</span>
+
+        <span class="flex items-center gap-3">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8976C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L9 8.5h6L12 2z"/><path d="M5 13a7 7 0 0 0 14 0c0-4-7-10-7-10s-7 6-7 10z"/>
+          </svg>
+          <span data-i18n="tickerSpecialistText">TEA & COFFEE SPECIALIST</span>
+        </span>
+        <span class="text-[#B8976C] text-xs">✦</span>
+
+        <span class="flex items-center gap-3">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8976C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v7a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/>
+          </svg>
+          <span data-i18n="tickerSpecialistText">TEA & COFFEE SPECIALIST</span>
+        </span>
+        <span class="text-[#B8976C] text-xs">✦</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= V12 ARTISAN POUR-OVER SECTION (Driper Showcase) ================= -->
+  <section id="v12-dripper" class="py-20 bg-[#FAF7F2] relative overflow-hidden border-b border-[#EAE5DC]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Image Composition (Pure Clean Solid PNG without Shadow or Box) -->
+        <div class="lg:col-span-6 relative flex items-center justify-center">
+          <img src="Driper.png?v=2002" 
+               alt="Wayns V12 Precision Dripper Setup" 
+               class="w-full max-h-[500px] object-contain transition-transform duration-500 hover:scale-102">
+        </div>
+
+        <!-- Right Content Area -->
+        <div class="lg:col-span-6 space-y-6">
+          
+          <!-- Category Badge -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#EAE5DC]/80 border border-[#04300d]/15 text-xs uppercase tracking-widest text-[#04300d] font-bold shadow-sm">
+            <i data-lucide="award" class="w-4 h-4 text-[#B8976C]"></i>
+            <span data-i18n="v12Badge">WAYNS SIGNATURE BAR</span>
+          </div>
+
+          <!-- Section Headings (Dual Font Luxury) -->
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.15] text-[#04300d]">
+            <span class="block font-black" style="font-family:'Plus Jakarta Sans',sans-serif;" data-i18n="v12TitleLine1">Crafted Drop by Drop:</span>
+            <span class="block font-serif font-bold italic text-[#B8976C]" data-i18n="v12TitleHighlight">The V12 Slow Drip</span>
+          </h2>
+
+          <!-- Descriptive Paragraphs -->
+          <p class="text-sm sm:text-base text-[#38483B] leading-relaxed font-normal" data-i18n="v12Desc1">
+            At Wayns Coffee, every cup tells an artisan story. Our golden V12 slow-drip extraction is engineered to unlock the rarest fruit and floral notes from premium Saudi Khawlani and Ethiopian single-origin beans.
+          </p>
+          <p class="text-sm sm:text-base text-[#38483B] leading-relaxed font-normal" data-i18n="v12Desc2">
+            A serene ritual where time, precise water temperature, and gravity come together to deliver an exceptionally clean, aromatic, and velvety coffee experience.
+          </p>
+
+          <!-- 2 Key Technical Features -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            
+            <div class="p-4 rounded-2xl bg-white border border-[#04300d]/10 shadow-sm flex items-start gap-3.5 hover:shadow-md transition-shadow">
+              <div class="w-10 h-10 rounded-xl bg-[#FAF7F2] border border-[#B8976C]/30 flex items-center justify-center text-[#04300d] flex-shrink-0">
+                <i data-lucide="sparkles" class="w-5 h-5 text-[#B8976C]"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-[#04300d]" data-i18n="v12Feature1Title">100% Single-Origin</h4>
+                <p class="text-xs text-[#526055] mt-1 leading-snug" data-i18n="v12Feature1Desc">Hand-picked high-altitude micro-lots roasted to perfection.</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-[#04300d]/10 shadow-sm flex items-start gap-3.5 hover:shadow-md transition-shadow">
+              <div class="w-10 h-10 rounded-xl bg-[#FAF7F2] border border-[#B8976C]/30 flex items-center justify-center text-[#04300d] flex-shrink-0">
+                <i data-lucide="droplets" class="w-5 h-5 text-[#B8976C]"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-[#04300d]" data-i18n="v12Feature2Title">Pure Cold & Hot Drip</h4>
+                <p class="text-xs text-[#526055] mt-1 leading-snug" data-i18n="v12Feature2Desc">Ultra-clean profile with no bitterness, highlighting natural caramel sweetness.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Action CTA Button -->
+          <div class="pt-3 flex items-center gap-4">
+            <a href="menu.html" class="btn-gold px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider inline-flex items-center gap-2.5 shadow-md">
+              <i data-lucide="coffee" class="w-4 h-4"></i>
+              <span data-i18n="v12Btn">Taste The V12 Brew</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 3 SIGNATURE ESSENTIALS (Coffee, Tea & Sweets Showcase) ================= -->
+  <section id="signature-trio" class="py-20 bg-[#F4EFEA] relative overflow-hidden border-b border-[#EAE5DC]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-14">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#04300d]/15 text-xs uppercase tracking-widest text-[#04300d] font-bold shadow-sm">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#B8976C]"></i>
+          <span>THE ESSENCE OF WAYNS</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#04300d] tracking-tight" style="font-family:'Plus Jakarta Sans',sans-serif;">
+          Crafted For Every Moment
+        </h2>
+        <p class="text-sm sm:text-base text-[#526055] leading-relaxed">
+          From masterfully roasted specialty coffee to calming artisanal tea blends and decadent handcrafted sweets.
+        </p>
+      </div>
+
+      <!-- 3 Items Grid (Coffee | Tea | Sweets) — No Box, Pure Floating Images -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-stretch">
+        
+        <!-- Item 1: Coffee Cup -->
+        <div class="group relative flex flex-col items-center justify-between text-center transition-all duration-300">
+          <div class="w-full flex flex-col items-center space-y-4">
+            <div class="relative h-64 sm:h-72 w-full flex items-center justify-center">
+              <img src="coffe_cup.png" alt="Wayns Specialty Coffee" class="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105">
+            </div>
+            <div class="pt-2 max-w-xs mx-auto">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-[#B8976C]">Signature Roast</span>
+              <h3 class="text-2xl font-bold text-[#04300d] mt-1" style="font-family:'Plus Jakarta Sans',sans-serif;">Specialty Coffee</h3>
+              <p class="text-xs text-[#526055] mt-2 leading-relaxed">
+                100% Arabica single-origin beans, precision roasted and brewed to perfection for an intense, aromatic cup.
+              </p>
+            </div>
+          </div>
+          <div class="pt-6 w-full max-w-xs mx-auto">
+            <a href="menu.html?cat=coffee" class="btn-gold inline-flex items-center justify-center gap-2 w-full py-3 rounded-full text-xs font-bold uppercase tracking-wider shadow-md">
+              <i data-lucide="coffee" class="w-4 h-4"></i>
+              <span>Explore Coffee</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Item 2: Tea Cup -->
+        <div class="group relative flex flex-col items-center justify-between text-center transition-all duration-300">
+          <div class="w-full flex flex-col items-center space-y-4">
+            <div class="relative h-64 sm:h-72 w-full flex items-center justify-center">
+              <img src="tea_cup.png" alt="Wayns Artisanal Tea" class="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105">
+            </div>
+            <div class="pt-2 max-w-xs mx-auto">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-[#B8976C]">Pure Infusions</span>
+              <h3 class="text-2xl font-bold text-[#04300d] mt-1" style="font-family:'Plus Jakarta Sans',sans-serif;">Artisanal Tea</h3>
+              <p class="text-xs text-[#526055] mt-2 leading-relaxed">
+                Carefully curated whole-leaf tea leaves infused with subtle saffron, mint, and aromatic herbs.
+              </p>
+            </div>
+          </div>
+          <div class="pt-6 w-full max-w-xs mx-auto">
+            <a href="menu.html?cat=tea" class="btn-gold inline-flex items-center justify-center gap-2 w-full py-3 rounded-full text-xs font-bold uppercase tracking-wider shadow-md">
+              <i data-lucide="sparkles" class="w-4 h-4"></i>
+              <span>Explore Tea</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Item 3: Sweets Plate -->
+        <div class="group relative flex flex-col items-center justify-between text-center transition-all duration-300">
+          <div class="w-full flex flex-col items-center space-y-4">
+            <div class="relative h-64 sm:h-72 w-full flex items-center justify-center">
+              <img src="sweets.png" alt="Wayns Signature Sweets" class="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105">
+            </div>
+            <div class="pt-2 max-w-xs mx-auto">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-[#B8976C]">Handcrafted Daily</span>
+              <h3 class="text-2xl font-bold text-[#04300d] mt-1" style="font-family:'Plus Jakarta Sans',sans-serif;">Luxury Sweets</h3>
+              <p class="text-xs text-[#526055] mt-2 leading-relaxed">
+                Traditional oriental pastries, gourmet cakes, and cardamom-infused date desserts baked fresh daily.
+              </p>
+            </div>
+          </div>
+          <div class="pt-6 w-full max-w-xs mx-auto">
+            <a href="menu.html?cat=sweets" class="btn-gold inline-flex items-center justify-center gap-2 w-full py-3 rounded-full text-xs font-bold uppercase tracking-wider shadow-md">
+              <i data-lucide="cake" class="w-4 h-4"></i>
+              <span>Explore Sweets</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- ================= FLAGSHIP LOCATION (Single Focused Luxury Lounge — No Box) ================= -->
+  <section id="location" class="py-24 bg-[#FAF7F2] relative overflow-hidden border-b border-[#EAE5DC]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left Details (Pure Open Luxury Layout) -->
+        <div class="lg:col-span-6 space-y-6">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-[#04300d]/10 text-xs uppercase tracking-widest text-[#04300d] font-bold shadow-sm">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#B8976C]"></i>
+            <span>KINGDOM FLAGSHIP</span>
+          </div>
+
+          <div class="space-y-2">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#04300d] tracking-tight" style="font-family:'Plus Jakarta Sans',sans-serif;">
+              Riyadh — Al Olaya Reserve
+            </h2>
+            <p class="text-xs sm:text-sm text-[#B8976C] font-semibold flex items-center gap-1.5">
+              <i data-lucide="navigation-2" class="w-3.5 h-3.5 text-[#B8976C]"></i>
+              <span>Prince Muhammad Ibn Abd Al Aziz St, Al Olaya, Riyadh 12241</span>
+            </p>
+          </div>
+
+          <p class="text-sm sm:text-base text-[#526055] leading-relaxed">
+            Step into our flagship haven in the vibrant heart of Riyadh. Featuring master slow-drip coffee bars, secluded VIP majlis seating, tranquil outdoor terrace, and express drive-thru lanes.
+          </p>
+
+          <!-- Minimalist Specs (No Box) -->
+          <div class="grid grid-cols-3 gap-6 pt-2 pb-2 border-y border-[#04300d]/10">
+            <div>
+              <div class="flex items-center gap-2 text-[#04300d] font-bold text-sm">
+                <i data-lucide="clock" class="w-4 h-4 text-[#B8976C]"></i>
+                <span>6:00 AM – 2:00 AM</span>
+              </div>
+              <div class="text-[11px] text-[#526055] mt-0.5">Open Daily</div>
+            </div>
+            <div>
+              <div class="flex items-center gap-2 text-[#04300d] font-bold text-sm">
+                <i data-lucide="car" class="w-4 h-4 text-[#B8976C]"></i>
+                <span>Drive-Thru</span>
+              </div>
+              <div class="text-[11px] text-[#526055] mt-0.5">Express Lane</div>
+            </div>
+            <div>
+              <div class="flex items-center gap-2 text-[#04300d] font-bold text-sm">
+                <i data-lucide="shield-check" class="w-4 h-4 text-[#B8976C]"></i>
+                <span>Valet Parking</span>
+              </div>
+              <div class="text-[11px] text-[#526055] mt-0.5">Complimentary</div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="pt-2 flex flex-wrap items-center gap-4">
+            <a href="https://maps.google.com/?q=Al+Olaya+Riyadh" target="_blank" class="btn-gold px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider inline-flex items-center gap-2 shadow-md">
+              <i data-lucide="navigation" class="w-4 h-4"></i>
+              <span>Get Directions</span>
+            </a>
+            <a href="tel:+966114567890" class="px-7 py-4 rounded-full text-xs font-bold uppercase tracking-wider inline-flex items-center gap-2 border border-[#04300d]/20 text-[#04300d] hover:bg-[#04300d] hover:text-white transition-all shadow-sm">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+              <span>Call Lounge</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right Interactive Map (No White Card, Soft Curvature) -->
+        <div class="lg:col-span-6">
+          <div class="rounded-3xl overflow-hidden aspect-[16/11] relative shadow-2xl border border-[#04300d]/10">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14498.423986422896!2d46.685324!3d24.697415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03310860bfdb%3A0xb3e6a9cb9b0e2776!2sAl%20Olaya%2C%20Riyadh%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1700000000000!5m2!1sen!2ssa" 
+              class="w-full h-full border-0 filter saturate-105" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Wayns Flagship Al Olaya Lounge Location">
+            </iframe>
+            <div class="absolute bottom-4 start-4 bg-[#04300d]/95 text-white backdrop-blur-md px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 shadow-lg">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>Open Now Until 2:00 AM</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= GUEST REVIEWS / TESTIMONIALS (No Box, Pure Clean Quotes) ================= -->
+  <section class="py-20 bg-[#F4EFEA] border-y border-[#EAE5DC] overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs uppercase tracking-widest text-[#04300d] font-bold block" data-i18n="testTag">Echoes of Saudi Hospitality</span>
+        <h2 class="text-3xl sm:text-4xl font-serif text-[#04300d] font-bold mt-2" data-i18n="testTitle">Loved by Connoisseurs Across KSA</h2>
+        <p class="text-xs text-[#526055] mt-2 block sm:hidden">Swipe sideways to read reviews ➔</p>
+      </div>
+
+      <!-- Reviews Carousel / Grid: No Box, Pure Floating Testimonials -->
+      <div class="flex sm:grid sm:grid-cols-3 gap-8 sm:gap-12 overflow-x-auto sm:overflow-visible no-scrollbar snap-x snap-mandatory pb-4 px-2 sm:px-0">
+        
+        <!-- Review 1 -->
+        <div class="relative flex-shrink-0 w-[85vw] sm:w-auto snap-center flex flex-col justify-between space-y-6">
+          <div class="space-y-3">
+            <div class="flex items-center gap-1 text-[#B8976C] text-sm">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-sm sm:text-base text-[#141C15] italic leading-relaxed" data-i18n="test1Quote">
+              "Wayns has set a new benchmark for coffee shops in Riyadh. Their Saudi Gahwa with Medina dates is royal standard, and the ambience is second to none."
+            </p>
+          </div>
+          
+          <div class="flex items-center gap-3.5 pt-2">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=150&auto=format&fit=crop" 
+                 alt="Abdulrahman Al-Subaie" 
+                 class="w-12 h-12 rounded-full object-cover shadow-sm flex-shrink-0">
+            <div>
+              <div class="font-bold text-[#04300d] text-sm" data-i18n="test1Author">Abdulrahman Al-Subaie</div>
+              <div class="text-xs text-[#526055]" data-i18n="test1Role">Coffee Critic & Architect, Riyadh</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="relative flex-shrink-0 w-[85vw] sm:w-auto snap-center flex flex-col justify-between space-y-6">
+          <div class="space-y-3">
+            <div class="flex items-center gap-1 text-[#B8976C] text-sm">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-sm sm:text-base text-[#141C15] italic leading-relaxed" data-i18n="test2Quote">
+              "The Spanish Latte and Khawlani V60 are world-class. The staff embody true Saudi Hafawah. My favorite spot for business meetings in Al Olaya."
+            </p>
+          </div>
+          
+          <div class="flex items-center gap-3.5 pt-2">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&auto=format&fit=crop" 
+                 alt="Nouf Al-Ghamdi" 
+                 class="w-12 h-12 rounded-full object-cover shadow-sm flex-shrink-0">
+            <div>
+              <div class="font-bold text-[#04300d] text-sm" data-i18n="test2Author">Nouf Al-Ghamdi</div>
+              <div class="text-xs text-[#526055]" data-i18n="test2Role">Entrepreneur, Jeddah</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="relative flex-shrink-0 w-[85vw] sm:w-auto snap-center flex flex-col justify-between space-y-6">
+          <div class="space-y-3">
+            <div class="flex items-center gap-1 text-[#B8976C] text-sm">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-sm sm:text-base text-[#141C15] italic leading-relaxed" data-i18n="test3Quote">
+              "An absolute masterpiece. From the curated ceramic cups to the tranquil terrace, Wayns captures both Saudi heritage and cutting-edge coffee culture."
+            </p>
+          </div>
+          
+          <div class="flex items-center gap-3.5 pt-2">
+            <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=150&auto=format&fit=crop" 
+                 alt="Eng. Fahad Al-Otaibi" 
+                 class="w-12 h-12 rounded-full object-cover shadow-sm flex-shrink-0">
+            <div>
+              <div class="font-bold text-[#04300d] text-sm" data-i18n="test3Author">Eng. Fahad Al-Otaibi</div>
+              <div class="text-xs text-[#526055]" data-i18n="test3Role">Frequent Guest, Al Khobar</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PREMIUM REDESIGNED FOOTER ================= -->
+  <footer id="contact" class="bg-[#04300d] text-white pt-16 pb-12 relative overflow-hidden border-t border-[#0C1A0E]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+
+        <!-- Brand Summary + Social Icons -->
+        <div class="md:col-span-5 space-y-5">
+          <img src="footer-logo.svg" alt="Wayns Coffee Saudi Arabia" class="h-20 sm:h-24 md:h-28 w-auto object-contain max-w-[320px]">
+          <p class="text-xs text-gray-300 leading-relaxed font-light max-w-sm" data-i18n="footerDesc">
+            Wayns Coffee is a luxury Saudi coffee destination blending centuries of heritage Gahwa rituals with world-champion specialty coffee artistry.
+          </p>
+
+          <!-- Social Media Icons using inline SVGs -->
+          <div class="flex items-center gap-3 pt-2">
+
+            <!-- Instagram -->
+            <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center hover:bg-white hover:text-[#04300d] hover:scale-105 transition-all shadow-sm group">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white group-hover:text-[#04300d]">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+
+            <!-- TikTok -->
+            <a href="#" aria-label="TikTok" class="w-10 h-10 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center hover:bg-white hover:scale-105 transition-all shadow-sm group">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" class="text-white group-hover:text-[#04300d]">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.05a8.16 8.16 0 0 0 4.77 1.52V7.12a4.85 4.85 0 0 1-1-.43z"/>
+              </svg>
+            </a>
+
+            <!-- X (Twitter) -->
+            <a href="#" aria-label="X / Twitter" class="w-10 h-10 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center hover:bg-white hover:scale-105 transition-all shadow-sm group">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="text-white group-hover:text-[#04300d]">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+
+            <!-- Snapchat -->
+            <a href="#" aria-label="Snapchat" class="w-10 h-10 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center hover:bg-white hover:scale-105 transition-all shadow-sm group">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" class="text-white group-hover:text-[#04300d]">
+                <path d="M12 2C8.74 2 6.1 4.7 6.1 8.05v.94c-.37.08-.78.12-1.1.12-.3 0-.52-.03-.7-.07-.12-.02-.23.07-.23.2v.02c0 .72.64 1.18 1.25 1.4-.07.22-.14.44-.21.65-.57.06-1.1.27-1.35.55-.08.09-.06.23.04.29.44.23 1.04.27 1.56.25.08.2.17.4.28.6-.69.36-1.43.98-1.43 1.74 0 .08.06.14.14.15 1.64.25 2.8 1.43 4.45 1.43.03 0 .06 0 .09-.01.4.34.91.55 1.44.55.53 0 1.04-.21 1.44-.55.03.01.06.01.09.01 1.65 0 2.81-1.18 4.45-1.43.08-.01.14-.07.14-.15 0-.76-.74-1.38-1.43-1.74.11-.2.2-.4.28-.6.52.02 1.12-.02 1.56-.25.1-.06.12-.2.04-.29-.25-.28-.78-.49-1.35-.55-.07-.21-.14-.43-.21-.65.61-.22 1.25-.68 1.25-1.4v-.02c0-.13-.11-.22-.23-.2-.18.04-.4.07-.7.07-.32 0-.73-.04-1.1-.12v-.94C17.9 4.7 15.26 2 12 2z"/>
+              </svg>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/966114567890" target="_blank" aria-label="WhatsApp" class="w-10 h-10 rounded-2xl bg-[#25D366] flex items-center justify-center hover:opacity-90 hover:scale-105 transition-all shadow-sm">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Contact & Head Office -->
+        <div class="md:col-span-7 space-y-5">
+          <h4 class="text-xs uppercase tracking-widest text-[#B8976C] font-bold flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span data-i18n="footerContactTitle">Contact & Head Office</span>
+          </h4>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs text-gray-300">
+
+            <!-- Address 2 lines -->
+            <div class="flex items-start gap-3">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8976C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 mt-0.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <div>
+                <div class="text-white font-bold text-xs mb-1" data-i18n="footerAddressTitle">Head Office</div>
+                <p class="leading-relaxed" data-i18n="footerAddressLine1">King Fahd Road, Al Olaya District,</p>
+                <p class="leading-relaxed" data-i18n="footerAddressLine2">Riyadh 12241, Kingdom of Saudi Arabia</p>
+              </div>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="flex items-start gap-3">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366" class="shrink-0 mt-0.5">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              <div>
+                <div class="text-white font-bold text-xs mb-1">WhatsApp</div>
+                <a href="https://wa.me/966114567890" target="_blank" class="hover:text-[#25D366] transition-colors" dir="ltr">+966 11 456 7890</a>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="flex items-start gap-3">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8976C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 mt-0.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <div>
+                <div class="text-white font-bold text-xs mb-1" data-i18n="footerPhoneLabel">Phone</div>
+                <a href="tel:+966114567890" class="hover:text-white transition-colors" dir="ltr">+966 11 456 7890</a>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-start gap-3">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8976C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 mt-0.5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <div>
+                <div class="text-white font-bold text-xs mb-1">Email</div>
+                <a href="mailto:hospitality@waynscafe.sa" class="hover:text-white transition-colors">hospitality@waynscafe.sa</a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ZATCA badge -->
+          <div class="flex items-center gap-2 text-[11px] text-gray-400 pt-1">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#B8976C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span data-i18n="footerTax">ZATCA e-Invoice Certified</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar — Copyright only, no Privacy/Terms, no CR/VAT -->
+      <div class="pt-8 text-center text-xs text-gray-400">
+        <p data-i18n="footerCopyright">
+          © 2026 Wayns Coffee (ونس كافيه) All Rights Reserved.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= APP-STYLE MOBILE BOTTOM NAVIGATION BAR (Warm Luxury Pure Icons) ================= -->
+  <nav class="fixed bottom-0 inset-x-0 z-40 bg-[#FAF7F2]/95 backdrop-blur-xl border-t border-[#04300d]/12 py-2 px-4 md:hidden shadow-[0_-8px_30px_rgba(4, 48, 13,0.08)]">
+    <div class="flex justify-around items-center max-w-md mx-auto">
+      <!-- Home (Active) -->
+      <a href="index.html" class="flex flex-col items-center justify-center gap-1 text-[#04300d] transition-colors py-1 px-3">
+        <i data-lucide="house" class="w-5 h-5 stroke-[2]"></i>
+        <span class="text-[10px] font-bold tracking-tight text-[#04300d]" data-i18n="bottomHome">Home</span>
+      </a>
+
+      <!-- Menu -->
+      <a href="menu.html" class="flex flex-col items-center justify-center gap-1 text-[#526055] hover:text-[#04300d] transition-colors py-1 px-3 group">
+        <i data-lucide="coffee" class="w-5 h-5 stroke-[1.75] group-hover:text-[#04300d]"></i>
+        <span class="text-[10px] font-medium tracking-tight" data-i18n="bottomMenu">Menu</span>
+      </a>
+
+      <!-- Branch -->
+      <a href="branch.html" class="flex flex-col items-center justify-center gap-1 text-[#526055] hover:text-[#04300d] transition-colors py-1 px-3 group">
+        <i data-lucide="store" class="w-5 h-5 stroke-[1.75] group-hover:text-[#04300d]"></i>
+        <span class="text-[10px] font-medium tracking-tight" data-i18n="bottomBranch">Branch</span>
+      </a>
+
+      <!-- Location -->
+      <a href="location.html" class="flex flex-col items-center justify-center gap-1 text-[#526055] hover:text-[#04300d] transition-colors py-1 px-3 group">
+        <i data-lucide="map-pin" class="w-5 h-5 stroke-[1.75] group-hover:text-[#04300d]"></i>
+        <span class="text-[10px] font-medium tracking-tight" data-i18n="bottomLocation">Location</span>
+      </a>
+
+      <!-- Contact -->
+      <a href="contact.html" class="flex flex-col items-center justify-center gap-1 text-[#526055] hover:text-[#04300d] transition-colors py-1 px-3 group">
+        <i data-lucide="phone" class="w-5 h-5 stroke-[1.75] group-hover:text-[#04300d]"></i>
+        <span class="text-[10px] font-medium tracking-tight" data-i18n="bottomContact">Contact</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- JavaScript Bundle -->
+  <script src="app.js"></script>
+
+</body>
+</html>

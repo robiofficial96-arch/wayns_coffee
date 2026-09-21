@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - Wayns Coffee | ونس كافيه</title>
+  <meta name="description" content="Explore Wayns Coffee signature menu: Royal Saudi Gahwa, specialty espresso, Khawlani single origin pour-overs, cold brews, and artisan desserts in Riyadh, Jeddah, and Khobar.">
+  <link rel="icon" type="image/svg+xml" href="wayns logo.svg">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            wayns: {
+              green: '#04300d',
+              dark: '#0c1a0e',
+              lightgreen: '#234827',
+              canvas: '#FAF7F2',
+              crema: '#F4EFEA',
+              cremasoft: '#FAF8F5',
+              sand: '#EAE5DC',
+              bronze: '#B8976C',
+              surface: '#FFFFFF'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            cairo: ['"Cairo"', 'sans-serif'],
+            amiri: ['"Amiri"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#FAF7F2] text-[#141C15] antialiased selection:bg-[#04300d] selection:text-white pb-20 md:pb-0">
+
+      <!-- ================= TOP ANNOUNCEMENT BAR ================= -->
+  <div class="hidden md:block bg-[#F4EFEA] text-[#141C15] text-xs py-2 px-4 border-b border-[#EAE5DC] transition-all">
+    <div class="max-w-7xl mx-auto flex justify-between items-center gap-4">
+      
+      <!-- Announcement with primary green pulsing dot -->
+      <div class="flex items-center gap-2.5">
+        <span class="inline-flex items-center justify-center w-2 h-2 rounded-full bg-[#04300d] animate-pulse"></span>
+        <span class="font-medium text-[#04300d] tracking-tight" data-i18n="topbarAnnouncement">
+          Experience Royal Saudi Hospitality & Artisanal Specialty Coffee | Riyadh • Jeddah • Khobar
+        </span>
+      </div>
+
+      <!-- Operating Hours & Contact Phone -->
+      <div class="flex items-center gap-4 text-[11px] text-[#526055]">
+        <span class="inline-flex items-center gap-1.5 font-medium">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-[#04300d] inline-block align-middle"></i>
+          <span data-i18n="topbarHours">Daily: 6:00 AM – 1:30 AM</span>
+        </span>
+        <span class="text-[#D4CCC0]">•</span>
+        <a href="tel:+966114567890" class="hover:text-[#04300d] transition-colors flex items-center gap-1.5 font-medium">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-[#04300d] inline-block align-middle"></i>
+          <span dir="ltr" data-i18n="topbarContact">+966 11 456 7890</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= STICKY HEADER & NAVBAR (Centered Logo, Clean & Pure) ================= -->
+  <header id="main-header" class="sticky top-0 z-40 w-full transition-all duration-300 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#04300d]/10 py-3 sm:py-3.5 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Desktop Navigation (3-Column Layout: Left Links | Center Logo | Right Links + Action) -->
+      <div class="hidden lg:grid lg:grid-cols-3 items-center">
+        
+        <!-- Left Nav Links -->
+        <nav class="flex items-center gap-8 text-sm">
+          <a href="index.html" class="text-[#141C15] font-semibold hover:text-[#04300d] after:content-[''] after:absolute after:bottom-0 after:start-0 after:w-0 after:h-[2px] after:bg-[#04300d] hover:after:w-full after:transition-all py-1 relative transition-colors" data-i18n="navHome">Home</a>
+          <a href="menu.html" class="text-[#04300d] font-bold after:content-[''] after:absolute after:bottom-0 after:start-0 after:w-full after:h-[2px] after:bg-[#04300d] py-1 relative transition-colors" data-i18n="navMenu">Menu</a>
+          <a href="branch.html" class="text-[#141C15] font-semibold hover:text-[#04300d] after:content-[''] after:absolute after:bottom-0 after:start-0 after:w-0 after:h-[2px] after:bg-[#04300d] hover:after:w-full after:transition-all py-1 relative transition-colors" data-i18n="navBranch">Branch</a>
+        </nav>
+
+        <!-- Center Brand Logo (Large & Prominent) -->
+        <div class="flex justify-center items-center">
+          <a href="index.html" class="flex items-center group py-1 focus:outline-none">
+            <img src="wayns logo.svg" alt="Wayns Coffee Logo" class="h-14 sm:h-16 lg:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+          </a>
+        </div>
+
+        <!-- Right Nav Links + Action Pill -->
+        <div class="flex items-center justify-end gap-7 text-sm">
+          <a href="location.html" class="text-[#141C15] font-semibold hover:text-[#04300d] after:content-[''] after:absolute after:bottom-0 after:start-0 after:w-0 after:h-[2px] after:bg-[#04300d] hover:after:w-full after:transition-all py-1 relative transition-colors" data-i18n="navLocation">Location</a>
+          <a href="contact.html" class="text-[#141C15] font-semibold hover:text-[#04300d] after:content-[''] after:absolute after:bottom-0 after:start-0 after:w-0 after:h-[2px] after:bg-[#04300d] hover:after:w-full after:transition-all py-1 relative transition-colors" data-i18n="navContact">Contact</a>
+          <a href="menu.html" class="btn-gold px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm flex items-center gap-2">
+            <i data-lucide="coffee" class="w-4 h-4"></i>
+            <span data-i18n="heroBtnExplore">Explore Menu</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Mobile Header (Logo Centered, Zero Burger Icon) -->
+      <div class="lg:hidden flex items-center justify-center py-1">
+        <a href="index.html" class="flex items-center focus:outline-none">
+          <img src="wayns logo.svg" alt="Wayns Coffee Logo" class="h-12 sm:h-14 w-auto object-contain">
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+<!-- ================= HERO / HEADER BANNER (Warm Crema Sanctuary) ================= -->
+  <section class="relative bg-[#F4EFEA] text-[#141C15] pt-12 pb-14 px-4 overflow-hidden border-b border-[#EAE5DC]" style="background-image: radial-gradient(circle at 50% 10%, rgba(4, 48, 13, 0.04) 0%, transparent 60%);">
+    <div class="relative z-10 max-w-4xl mx-auto text-center space-y-4">
+      <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white border border-[#04300d]/15 text-xs text-[#04300d] font-bold tracking-wide shadow-sm">
+        <span class="w-5 h-5 rounded-full bg-[#04300d]/10 text-[#04300d] flex items-center justify-center text-[10px]">
+          <i class="fa-solid fa-crown"></i>
+        </span>
+        <span data-i18n="menuTag">Artisan Craftsmanship</span>
+      </div>
+      
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-serif tracking-tight text-[#04300d]" data-i18n="pageMenuTitle">
+        Our Signature Coffee & Gourmet Menu
+      </h1>
+      
+      <p class="text-sm sm:text-base text-[#526055] max-w-2xl mx-auto font-normal leading-relaxed" data-i18n="pageMenuSubtitle">
+        Crafted with championship precision using 100% specialty grade Arabica and authentic Saudi Gahwa traditions.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ================= CATEGORY FILTER TABS (Warm Glass Sticky Bar) ================= -->
+  <section class="sticky top-[65px] z-30 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#04300d]/10 py-3.5 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-start sm:justify-center gap-2 sm:gap-3 overflow-x-auto no-scrollbar pb-1">
+        
+        <button data-category="all" class="menu-filter-btn px-5 py-2.5 rounded-full text-xs font-bold transition-all whitespace-nowrap bg-[#04300d] text-white border border-[#04300d] shadow-md cursor-pointer" data-i18n="menuCatAll">
+          All Offerings
+        </button>
+        
+        <button data-category="coffee" class="menu-filter-btn px-5 py-2.5 rounded-full text-xs font-bold transition-all whitespace-nowrap bg-white text-[#141C15] border border-[#04300d]/12 hover:border-[#04300d] hover:text-[#04300d] shadow-sm cursor-pointer">
+          <i data-lucide="coffee" class="w-3.5 h-3.5 inline-block mr-1"></i>
+          <span>Specialty Coffee</span>
+        </button>
+        
+        <button data-category="tea" class="menu-filter-btn px-5 py-2.5 rounded-full text-xs font-bold transition-all whitespace-nowrap bg-white text-[#141C15] border border-[#04300d]/12 hover:border-[#04300d] hover:text-[#04300d] shadow-sm cursor-pointer">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 inline-block mr-1"></i>
+          <span>Artisanal Tea & Gahwa</span>
+        </button>
+        
+        <button data-category="sweets" class="menu-filter-btn px-5 py-2.5 rounded-full text-xs font-bold transition-all whitespace-nowrap bg-white text-[#141C15] border border-[#04300d]/12 hover:border-[#04300d] hover:text-[#04300d] shadow-sm cursor-pointer">
+          <i data-lucide="cake" class="w-3.5 h-3.5 inline-block mr-1"></i>
+          <span>Luxury Sweets</span>
+        </button>
+        
+        <button data-category="mojito" class="menu-filter-btn px-5 py-2.5 rounded-full text-xs font-bold transition-all whitespace-nowrap bg-white text-[#141C15] border border-[#04300d]/12 hover:border-[#04300d] hover:text-[#04300d] shadow-sm cursor-pointer">
+          <i data-lucide="glass-water" class="w-3.5 h-3.5 inline-block mr-1"></i>
+          <span>Mojitos & Refreshers</span>
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MENU ITEMS SEPARATE SECTIONS ================= -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+
+    <!-- ================= SECTION 1: SPECIALTY COFFEE ================= -->
+    <section data-menu-section="coffee" class="space-y-6">
+      <div class="flex items-center justify-between border-b border-[#04300d]/10 pb-4">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-widest text-[#B8976C]">Master Roasted</span>
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-[#04300d] flex items-center gap-2 mt-0.5">
+            <i data-lucide="coffee" class="w-6 h-6 text-[#04300d]"></i>
+            <span>Specialty Coffee</span>
+          </h2>
+        </div>
+        <span class="text-xs text-[#526055]">Single-Origin & Handcrafted</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        
+        <!-- Coffee Item 1: Wayns Spanish Latte -->
+        <div class="menu-card card-premium overflow-hidden flex flex-col justify-between group rounded-3xl shadow-sm hover:shadow-xl transition-all" data-category="coffee">
+          <div>
+            <div class="relative h-56 overflow-hidden bg-gray-100">
+              <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?q=80&w=800&auto=format&fit=crop" alt="Wayns Spanish Latte" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 end-3 bg-[#04300d] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-md">Best Seller</span>
+            </div>
+            <div class="p-5 sm:p-6 space-y-2.5">
+              <div class="flex justify-between items-start gap-2">
+                <h3 class="font-bold text-lg text-[#04300d] font-serif">Wayns Spanish Latte</h3>
+                <span class="text-base font-extrabold text-[#04300d] whitespace-nowrap inline-flex items-center gap-1">28 <img src="Saudi_Riyal_Symbol copy.svg" alt="ر.س" class="riyal-symbol"></span>
+              </div>
+              <p class="text-xs text-[#526055] leading-relaxed">
+                Velvety double espresso, sweet condensed milk foam, dusted with aromatic cinnamon and nutmeg.
+              </p>
+            </div>
+          </div>
+          <div class="p-5 sm:p-6 pt-0 flex gap-2">
+            <button class="btn-order-item flex-1 btn-gold py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-sm">
+              <i class="fa-solid fa-plus"></i>
+              <span>Order Now</span>
+            </button>
+            <a href="https://wa.me/966114567890?text=Hello%20Wayns%20Coffee,%20I%20would%20like%20to%20order%20Wayns%20Spanish%20Latte" target="_blank" class="w-10 h-10 rounded-xl bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white border border-[#25D366]/30 flex items-center justify-center transition-all shadow-sm">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Coffee Item 2: Khawlani V60 Single Origin -->
+        <div class="menu-card card-premium overflow-hidden flex flex-col justify-between group rounded-3xl shadow-sm hover:shadow-xl transition-all" data-category="coffee">
+          <div>
+            <div class="relative h-56 overflow-hidden bg-gray-100">
+              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop" alt="Khawlani V60" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 end-3 bg-[#04300d] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-md">Exclusive</span>
+            </div>
+            <div class="p-5 sm:p-6 space-y-2.5">
+              <div class="flex justify-between items-start gap-2">
+                <h3 class="font-bold text-lg text-[#04300d] font-serif">Khawlani V60 Single Origin</h3>
+                <span class="text-base font-extrabold text-[#04300d] whitespace-nowrap inline-flex items-center gap-1">34 <img src="Saudi_Riyal_Symbol copy.svg" alt="ر.س" class="riyal-symbol"></span>
+              </div>
+              <p class="text-xs text-[#526055] leading-relaxed">
+                Specialty Saudi Khawlani beans with notes of bergamot, dried figs, and wild blossom honey.
+              </p>
+            </div>
+          </div>
+          <div class="p-5 sm:p-6 pt-0 flex gap-2">
+            <button class="btn-order-item flex-1 btn-gold py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-sm">
+              <i class="fa-solid fa-plus"></i>
+              <span>Order Now</span>
+            </button>
+            <a href="https://wa.me/966114567890?text=Hello%20Wayns%20Coffee,%20I%20would%20like%20to%20order%20Khawlani%20V60%20Single%20Origin" target="_blank" class="w-10 h-10 rounded-xl bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white border border-[#25D366]/30 flex items-center justify-center transition-all shadow-sm">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Coffee Item 3: Signature Flat White -->
+        <div class="menu-card card-premium overflow-hidden flex flex-col justify-between group rounded-3xl shadow-sm hover:shadow-xl transition-all" data-category="coffee">
+          <div>
+            <div class="relative h-56 overflow-hidden bg-gray-100">
+              <img src="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?q=80&w=800&auto=format&fit=crop" alt="Signature Flat White" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 end-3 bg-[#04300d] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-md">Classic</span>
+            </div>
+            <div class="p-5 sm:p-6 space-y-2.5">
+              <div class="flex justify-between items-start gap-2">
+                <h3 class="font-bold text-lg text-[#04300d] font-serif">Signature Flat White</h3>
+                <span class="text-base font-extrabold text-[#04300d] whitespace-nowrap inline-flex items-center gap-1">24 <img src="Saudi_Riyal_Symbol copy.svg" alt="ر.س" class="riyal-symbol"></span>
+              </div>
+              <p class="text-xs text-[#526055] leading-relaxed">
+                Double ristretto made with Ethiopian Yirgacheffe and micro-textured whole milk.
+              </p>
+            </div>
+          </div>
+          <div class="p-5 sm:p-6 pt-0 flex gap-2">
+            <button class="btn-order-item flex-1 btn-gold py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-sm">
+              <i class="fa-solid fa-plus"></i>
+              <span>Order Now</span>
+            </button>
+            <a href="https://wa.me/966114567890?text=Hello%20Wayns%20Coffee,%20I%20would%20like%20to%20order%20Signature%20Flat%20White" target="_blank" class="w-10 h-10 rounded-xl bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white border border-[#25D366]/30 flex items-center justify-center transition-all shadow-sm">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 2: ARTISANAL TEA & GAHWA ================= -->
+    <section data-menu-section="tea" class="space-y-6">
+      <div class="flex items-center justify-between border-b border-[#04300d]/10 pb-4">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-widest text-[#B8976C]">Heritage Rituals</span>
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-[#04300d] flex items-center gap-2 mt-0.5">
+            <i data-lucide="sparkles" class="w-6 h-6 text-[#04300d]"></i>
+            <span>Artisanal Tea & Gahwa</span>
+          </h2>
+        </div>
+        <span class="text-xs text-[#526055]">Infusions & Traditional Pots</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        
+        <!-- Tea Item 1: Royal Saudi Gahwa Dallah -->
+        <div class="menu-card card-premium overflow-hidden flex flex-col justify-between group rounded-3xl shadow-sm hover:shadow-xl transition-all" data-category="tea">
+          <div>
+            <div class="relative h-56 overflow-hidden bg-gray-100">
+              <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=800&auto=format&fit=crop" alt="Royal Saudi Gahwa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 end-3 bg-[#04300d] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-md">Royal Heritage</span>
+            </div>
+            <div class="p-5 sm:p-6 space-y-2.5">
+              <div class="flex justify-between items-start gap-2">
+                <h3 class="font-bold text-lg text-[#04300d] font-serif">Royal Saudi Gahwa Dallah</h3>
+                <span class="text-base font-extrabold text-[#04300d] whitespace-nowrap inline-flex items-center gap-1">42 <img src="Saudi_Riyal_Symbol copy.svg" alt="ر.س" class="riyal-symbol"></span>
+              </div>
+              <p class="text-xs text-[#526055] leading-relaxed">
+                Traditional Saudi golden coffee infused with mountain cardamom & pure saffron. Served with Sukari dates & tahini.
+              </p>
+            </div>
+          </div>
+          <div class="p-5 sm:p-6 pt-0 flex gap-2">
+            <button class="btn-order-item flex-1 btn-gold py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-sm">
+              <i class="fa-solid fa-plus"></i>
+              <span>Order Now</span>
+            </button>
+            <a href="https://wa.me/966114567890?text=Hello%20Wayns%20Coffee,%20I%20would%20like%20to%20order%20Royal%20Saudi%20Gahwa%20Dallah" target="_blank" class="w-10 h-10 rounded-xl bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white border border-[#25D366]/30 flex items-center justify-center transition-all shadow-sm">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tea Item 2: Moroccan Mint & Saffron Tea -->
+        <div class="menu-card card-premium overflow-hidden flex flex-col justify-between group rounded-3xl shadow-sm hover:shadow-xl transition-all" data-category="tea">
+          <div>
+            <div class="relative h-56 overflow-hidden bg-gray-100">
+              <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?q=80&w=800&auto=format&fit=crop" alt="Artisanal Mint Tea" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 end-3 bg-[#04300d] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-md">Organic Leaves</span>
+            </div>
+            <div class="p-5 sm:p-6 space-y-2.5">
+              <div class="flex justify-between items-start gap-2">
+                <h3 class="font-bold text-lg text-[#04300d] font-serif">Saffron Royal Mint Tea</h3>
+                <span class="text-base font-extrabold text-[#04300d] whitespace-nowrap inline-flex items-center gap-1">22 <img src="Saudi_Riyal_Symbol copy.svg" alt="ر.س" class="riyal-symbol"></span>
+              </div>
+              <p class="text-xs text-[#526055] leading-relaxed">
+                Hand-picked whole green tea leaves slow infused with fresh Medina mint, organic honey, and royal saffron threads.
+              </p>
+            </div>
+          </div>
+          <div class="p-5 sm:p-6 pt-0 flex gap-2">
+            <button class="btn-order-item flex-1 btn-gold py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-sm">
+              <i class="fa-solid fa-plus"></i>
+              <span>Order Now</span>
+            </button>
+            <a href="https://wa.me/966114567890?text=Hello%20Wayns%20Coffee,%20I%20would%20like%20to%20order%20Saffron%20Royal%20Mint%20Tea" target="_blank" class="w-10 h-10 rounded-xl bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white border border-[#25D366]/30 flex items-center justify-center transition-all shadow-sm">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tea Item 3: Taif Rose Herbal Infusion -->
+        <div class="menu-card card-premium overflow-hidden flex flex-col justify-between group rounded-3xl shadow-sm hover:shadow-xl transition-all" data-category="tea">
+          <div>
+            <div class="relative h-56 overflow-hidden bg-gray-100">
+              <img src="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?q=80&w=800&auto=format&fit=crop" alt="Taif Rose Tea" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 end-3 bg-[#04300d] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-md">Signature</span>
+            </div>
+            <div class="p-5 sm:p-6 space-y-2.5">
+              <div class="flex justify-between items-start gap-2">
+                <h3 class="font-bold text-lg text-[#04300d] font-serif">Taif Rose Infusion</h3>
+                <span class="text-base font-extrabold text-[#04300d] whitespace-nowrap inline-flex items-center gap-1">26 <img src="Saudi_Riyal_Symbol copy.svg" alt="ر.س" class="riyal-symbol"></span>
+              </div>
+              <p class="text-xs text-[#526055] leading-relaxed">
+                Distilled aromatic Taif rose petals combined with wild chamomile blossoms and white pear essence.
+              </p>
+            </div>
+          </div>
+          <div class="p-5 sm:p-6 pt-0 flex gap-2">
+            <button class="btn-order-item flex-1 btn-gold py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-sm">
+              <i class="fa-solid fa-plus"></i>
+              <span>Order Now</span>
+            </button>
+            <a href="https://wa.me/966114567890?text=Hello%20Wayns%20Coffee,%20I%20would%20like%20to%20order%20Taif%20Rose%20Infusion" target="_blank" class="w-10 h-10 rounded-xl bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white border border-[#25D366]/30 flex items-center justify-center transition-all shadow-sm">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 3: LUXURY SWEETS ================= -->
+    <section data-menu-section="sweets" class="space-y-6">
+      <div class="flex items-center justify-between border-b border-[#04300d]/10 pb-4">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-widest text-[#B8976C]">Artisan Bakery</span>
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-[#04300d] flex items-center gap-2 mt-0.5">
+            <i data-lucide="cake" class="w-6 h-6 text-[#04300d]"></i>
+            <span>Luxury Sweets & Pastries</span>
+          </h2>
+        </div>
+        <span class="text-xs text-[#526055]">Baked Fresh Every Morning</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        
+        <!-- Sweets Item 1: Cardamom & Date Salted Cake -->
+        <div class="menu-card card-premium overflow-hidden flex flex-col justify-between group rounded-3xl shadow-sm hover:shadow-xl transition-all" data-category="sweets">
+          <div>
+            <div class="relative h-56 overflow-hidden bg-gray-100">
+              <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=800&auto=format&fit=crop" alt="Date Salted Cake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 end-3 bg-[#04300d] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-md">Chef's Special</span>
+            </div>
+            <div class="p-5 sm:p-6 space-y-2.5">
+              <div class="flex justify-between items-start gap-2">
+                <h3 class="font-bold text-lg text-[#04300d] font-serif">Cardamom & Date Salted Cake</h3>
+                <span class="text-base font-extrabold text-[#04300d] whitespace-nowrap inline-flex items-center gap-1">36 <img src="Saudi_Riyal_Symbol copy.svg" alt="ر.س" class="riyal-symbol"></span>
+              </div>
+              <p class="text-xs text-[#526055] leading-relaxed">
+                Warm Medina date sponge, Tahini salted caramel, and vanilla bean cream glaze.
+              </p>
+            </div>
+          </div>
+          <div class="p-5 sm:p-6 pt-0 flex gap-2">
+            <button class="btn-order-item flex-1 btn-gold py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-sm">
+              <i class="fa-solid fa-plus"></i>
+              <span>Order Now</span>
+            </button>
+            <a href="https://wa.me/966114567890?text=Hello%20Wayns%20Coffee,%20I%20would%20like%20to%20order%20Cardamom%20and%20Date%20Cake" target="_blank" class="w-10 h-10 rounded-xl bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white border border-[#25D366]/30 flex items-center justify-center transition-all shadow-sm">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Sweets Item 2: Pistachio Baklava Croissant -->
+        <div class="menu-card card-premium overflow-hidden flex flex-col justify-between group rounded-3xl shadow-sm hover:shadow-xl transition-all" data-category="sweets">
+          <div>
+            <div class="relative h-56 overflow-hidden bg-gray-100">
+              <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=800&auto=format&fit=crop" alt="Baklava Croissant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 end-3 bg-[#04300d] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-md">Fresh Daily</span>
+            </div>
+            <div class="p-5 sm:p-6 space-y-2.5">
+              <div class="flex justify-between items-start gap-2">
+                <h3 class="font-bold text-lg text-[#04300d] font-serif">Pistachio Baklava Croissant</h3>
+                <span class="text-base font-extrabold text-[#04300d] whitespace-nowrap inline-flex items-center gap-1">29 <img src="Saudi_Riyal_Symbol copy.svg" alt="ر.س" class="riyal-symbol"></span>
+              </div>
+              <p class="text-xs text-[#526055] leading-relaxed">
+                Flaky Parisian pastry filled with Syrian pistachios and delicate orange blossom reduction.
+              </p>
+            </div>
+          </div>
+          <div class="p-5 sm:p-6 pt-0 flex gap-2">
+            <button class="btn-order-item flex-1 btn-gold py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-sm">
+              <i class="fa-solid fa-plus"></i>
+              <span>Order Now</span>
+            </button>
+            <a href="https://wa.me/966114567890?text=Hello%20Wayns%20Coffee,%20I%20would%20like%20to%20order%20Pistachio%20Baklava%20Croissant" target="_blank" class="w-10 h-10 rounded-xl bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white border border-[#25D366]/30 flex items-center justify-center transition-all shadow-sm">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Sweets Item 3: Saffron San Sebastian Cheesecake -->
+        <div class="menu-card card-premium overflow-hidden flex flex-col justify-between group rounded-3xl shadow-sm hover:shadow-xl transition-all" data-category="sweets">
+          <div>
+            <div class="relative h-56 overflow-hidden bg-gray-100">
+              <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&w=800&auto=format&fit=crop" alt="San Sebastian Cheesecake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 end-3 bg-[#04300d] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-md">Decadent</span>
+            </div>
+            <div class="p-5 sm:p-6 space-y-2.5">
+              <div class="flex justify-between items-start gap-2">
+                <h3 class="font-bold text-lg text-[#04300d] font-serif">Saffron San Sebastian</h3>
+                <span class="text-base font-extrabold text-[#04300d] whitespace-nowrap inline-flex items-center gap-1">38 <img src="Saudi_Riyal_Symbol copy.svg" alt="ر.س" class="riyal-symbol"></span>
+              </div>
+              <p class="text-xs text-[#526055] leading-relaxed">
+                Caramelized Basque cheesecake infused with pure saffron essence, served with warm Belgian chocolate sauce.
+              </p>
+            </div>
+          </div>
+          <div class="p-5 sm:p-6 pt-0 flex gap-2">
+            <button class="btn-order-item flex-1 btn-gold py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-sm">
+              <i class="fa-solid fa-plus"></i>
+              <span>Order Now</span>
+            </button>
+            <a href="https://wa.me/966114567890?text=Hello%20Wayns%20Coffee,%20I%20would%20like%20to%20order%20Saffron%20San%20Sebastian" target="_blank" class="w-10 h-10 rounded-xl bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white border border-[#25D366]/30 flex items-center justify-center transition-all shadow-sm">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 4: MOJITOS & REFRESHERS ================= -->
+    <section data-menu-section="mojito" class="space-y-6">
+      <div class="flex items-center justify-between border-b border-[#04300d]/10 pb-4">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-widest text-[#B8976C]">Cold Crafted</span>
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-[#04300d] flex items-center gap-2 mt-0.5">
+            <i data-lucide="glass-water" class="w-6 h-6 text-[#04300d]"></i>
+            <span>Mojitos & Refreshers</span>
+          </h2>
+        </div>
+        <span class="text-xs text-[#526055]">Ice-Cold Sparkling Brews</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        
+        <!-- Mojito Item 1: Taif Passion Fruit & Mint Mojito -->
+        <div class="menu-card card-premium overflow-hidden flex flex-col justify-between group rounded-3xl shadow-sm hover:shadow-xl transition-all" data-category="mojito">
+          <div>
+            <div class="relative h-56 overflow-hidden bg-gray-100">
+              <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=800&auto=format&fit=crop" alt="Passion Fruit Mojito" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 end-3 bg-[#04300d] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-md">Summer Signature</span>
+            </div>
+            <div class="p-5 sm:p-6 space-y-2.5">
+              <div class="flex justify-between items-start gap-2">
+                <h3 class="font-bold text-lg text-[#04300d] font-serif">Taif Passion Fruit Mojito</h3>
+                <span class="text-base font-extrabold text-[#04300d] whitespace-nowrap inline-flex items-center gap-1">28 <img src="Saudi_Riyal_Symbol copy.svg" alt="ر.س" class="riyal-symbol"></span>
+              </div>
+              <p class="text-xs text-[#526055] leading-relaxed">
+                Muddled fresh Persian limes, garden mint, tropical passion fruit pulp, and premium sparkling soda.
+              </p>
+            </div>
+          </div>
+          <div class="p-5 sm:p-6 pt-0 flex gap-2">
+            <button class="btn-order-item flex-1 btn-gold py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-sm">
+              <i class="fa-solid fa-plus"></i>
+              <span>Order Now</span>
+            </button>
+            <a href="https://wa.me/966114567890?text=Hello%20Wayns%20Coffee,%20I%20would%20like%20to%20order%20Passion%20Fruit%20Mojito" target="_blank" class="w-10 h-10 rounded-xl bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white border border-[#25D366]/30 flex items-center justify-center transition-all shadow-sm">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mojito Item 2: Iced Hibiscus & Pomegranate Mocktail -->
+        <div class="menu-card card-premium overflow-hidden flex flex-col justify-between group rounded-3xl shadow-sm hover:shadow-xl transition-all" data-category="mojito">
+          <div>
+            <div class="relative h-56 overflow-hidden bg-gray-100">
+              <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=800&auto=format&fit=crop" alt="Iced Hibiscus Mocktail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 end-3 bg-[#04300d] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-md">Local Taif Blend</span>
+            </div>
+            <div class="p-5 sm:p-6 space-y-2.5">
+              <div class="flex justify-between items-start gap-2">
+                <h3 class="font-bold text-lg text-[#04300d] font-serif">Hibiscus Taif Pomegranate</h3>
+                <span class="text-base font-extrabold text-[#04300d] whitespace-nowrap inline-flex items-center gap-1">26 <img src="Saudi_Riyal_Symbol copy.svg" alt="ر.س" class="riyal-symbol"></span>
+              </div>
+              <p class="text-xs text-[#526055] leading-relaxed">
+                Wild Egyptian karkadeh cold infused with fresh Taif pomegranate juice, crushed ice, and rosemary.
+              </p>
+            </div>
+          </div>
+          <div class="p-5 sm:p-6 pt-0 flex gap-2">
+            <button class="btn-order-item flex-1 btn-gold py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-sm">
+              <i class="fa-solid fa-plus"></i>
+              <span>Order Now</span>
+            </button>
+            <a href="https://wa.me/966114567890?text=Hello%20Wayns%20Coffee,%20I%20would%20like%20to%20order%20Iced%20Hibiscus%20Mocktail" target="_blank" class="w-10 h-10 rounded-xl bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white border border-[#25D366]/30 flex items-center justify-center transition-all shadow-sm">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mojito Item 3: Blue Lagoon Mint Fizz -->
+        <div class="menu-card card-premium overflow-hidden flex flex-col justify-between group rounded-3xl shadow-sm hover:shadow-xl transition-all" data-category="mojito">
+          <div>
+            <div class="relative h-56 overflow-hidden bg-gray-100">
+              <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?q=80&w=800&auto=format&fit=crop" alt="Blue Lagoon Fizz" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 end-3 bg-[#04300d] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-md">Ice Cold</span>
+            </div>
+            <div class="p-5 sm:p-6 space-y-2.5">
+              <div class="flex justify-between items-start gap-2">
+                <h3 class="font-bold text-lg text-[#04300d] font-serif">Blue Curaçao Mint Fizz</h3>
+                <span class="text-base font-extrabold text-[#04300d] whitespace-nowrap inline-flex items-center gap-1">27 <img src="Saudi_Riyal_Symbol copy.svg" alt="ر.س" class="riyal-symbol"></span>
+              </div>
+              <p class="text-xs text-[#526055] leading-relaxed">
+                Vibrant non-alcoholic blue curaçao syrup, fresh zesty lime juice, mint leaves, and sparkling mineral water.
+              </p>
+            </div>
+          </div>
+          <div class="p-5 sm:p-6 pt-0 flex gap-2">
+            <button class="btn-order-item flex-1 btn-gold py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-sm">
+              <i class="fa-solid fa-plus"></i>
+              <span>Order Now</span>
+            </button>
+            <a href="https://wa.me/966114567890?text=Hello%20Wayns%20Coffee,%20I%20would%20like%20to%20order%20Blue%20Curacao%20Mint%20Fizz" target="_blank" class="w-10 h-10 rounded-xl bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white border border-[#25D366]/30 flex items-center justify-center transition-all shadow-sm">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= GAHWA CEREMONY SPOTLIGHT (Warm Crema Sanctuary) ================= -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mb-12">
+    <div class="bg-[#F4EFEA] text-[#141C15] rounded-3xl p-8 sm:p-12 border border-[#EAE5DC] relative overflow-hidden shadow-lg">
+      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-8 space-y-4">
+          <span class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white border border-[#04300d]/12 text-xs text-[#04300d] uppercase tracking-wider font-bold shadow-sm">
+            <i class="fa-solid fa-gem text-[#04300d]"></i>
+            <span data-i18n="gahwaTag">Royal Saudi Heritage • القهوة السعودية</span>
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-bold font-serif text-[#04300d]" data-i18n="gahwaTitle">
+            The Ceremony of Authentic Saudi Gahwa
+          </h2>
+          <p class="text-xs sm:text-sm text-[#526055] leading-relaxed max-w-2xl font-normal" data-i18n="gahwaDesc1">
+            Slow-brewed in golden Dallahs with highland Khawlani beans, royal saffron, and green cardamom. Served with premium Medina Ajwa and Qassim dates.
+          </p>
+        </div>
+        <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
+          <a href="https://wa.me/966114567890?text=Hello%20Wayns%20Coffee,%20I%20would%20like%20to%20order%20Traditional%20Gahwa%20Pot%20(Dallah)" target="_blank" class="btn-gold py-3.5 px-6 rounded-2xl text-center text-xs uppercase font-bold flex items-center justify-center gap-2 shadow-md">
+            <i class="fa-solid fa-mug-hot"></i>
+            <span data-i18n="gahwaBtnOrder">Order Traditional Gahwa Pot (Dallah)</span>
+          </a>
+          <a href="branch.html" class="btn-outline-gold py-3 px-6 rounded-2xl text-center text-xs uppercase font-bold flex items-center justify-center gap-2">
+            <i data-lucide="store" class="w-4 h-4 text-[#04300d]"></i>
+          <span data-i18n="navBranch">Visit Branches</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- ================= LUXURY FOOTER (Deep Forest Emerald Grounding) ================= -->
+  <footer class="bg-[#07150C] text-white pt-16 pb-12 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+
+        <!-- Brand Summary + Social Icons -->
+        <div class="md:col-span-5 space-y-5">
+          <img src="footer-logo.svg" alt="Wayns Coffee Saudi Arabia" class="h-20 sm:h-24 md:h-28 w-auto object-contain max-w-[320px]">
+          <p class="text-xs text-gray-300 leading-relaxed font-light max-w-sm" data-i18n="footerDesc">
+            Wayns Coffee is a luxury Saudi coffee destination blending centuries of heritage Gahwa rituals with world-champion specialty coffee artistry.
+          </p>
+
+          <!-- Social Media Icons using inline SVGs -->
+          <div class="flex items-center gap-3 pt-2">
+
+            <!-- Instagram -->
+            <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center hover:bg-white hover:text-[#04300d] hover:scale-105 transition-all shadow-sm group">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white group-hover:text-[#04300d]">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+
+            <!-- TikTok -->
+            <a href="#" aria-label="TikTok" class="w-10 h-10 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center hover:bg-white hover:scale-105 transition-all shadow-sm group">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" class="text-white group-hover:text-[#04300d]">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.05a8.16 8.16 0 0 0 4.77 1.52V7.12a4.85 4.85 0 0 1-1-.43z"/>
+              </svg>
+            </a>
+
+            <!-- X (Twitter) -->
+            <a href="#" aria-label="X / Twitter" class="w-10 h-10 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center hover:bg-white hover:scale-105 transition-all shadow-sm group">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="text-white group-hover:text-[#04300d]">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+
+            <!-- Snapchat -->
+            <a href="#" aria-label="Snapchat" class="w-10 h-10 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center hover:bg-white hover:scale-105 transition-all shadow-sm group">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" class="text-white group-hover:text-[#04300d]">
+                <path d="M12 2C8.74 2 6.1 4.7 6.1 8.05v.94c-.37.08-.78.12-1.1.12-.3 0-.52-.03-.7-.07-.12-.02-.23.07-.23.2v.02c0 .72.64 1.18 1.25 1.4-.07.22-.14.44-.21.65-.57.06-1.1.27-1.35.55-.08.09-.06.23.04.29.44.23 1.04.27 1.56.25.08.2.17.4.28.6-.69.36-1.43.98-1.43 1.74 0 .08.06.14.14.15 1.64.25 2.8 1.43 4.45 1.43.03 0 .06 0 .09-.01.4.34.91.55 1.44.55.53 0 1.04-.21 1.44-.55.03.01.06.01.09.01 1.65 0 2.81-1.18 4.45-1.43.08-.01.14-.07.14-.15 0-.76-.74-1.38-1.43-1.74.11-.2.2-.4.28-.6.52.02 1.12-.02 1.56-.25.1-.06.12-.2.04-.29-.25-.28-.78-.49-1.35-.55-.07-.21-.14-.43-.21-.65.61-.22 1.25-.68 1.25-1.4v-.02c0-.13-.11-.22-.23-.2-.18.04-.4.07-.7.07-.32 0-.73-.04-1.1-.12v-.94C17.9 4.7 15.26 2 12 2z"/>
+              </svg>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/966114567890" target="_blank" aria-label="WhatsApp" class="w-10 h-10 rounded-2xl bg-[#25D366] flex items-center justify-center hover:opacity-90 hover:scale-105 transition-all shadow-sm">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Contact & Head Office -->
+        <div class="md:col-span-7 space-y-5">
+          <h4 class="text-xs uppercase tracking-widest text-[#B8976C] font-bold flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span data-i18n="footerContactTitle">Contact & Head Office</span>
+          </h4>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs text-gray-300">
+
+            <!-- Address 2 lines -->
+            <div class="flex items-start gap-3">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8976C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 mt-0.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <div>
+                <div class="text-white font-bold text-xs mb-1" data-i18n="footerAddressTitle">Head Office</div>
+                <p class="leading-relaxed" data-i18n="footerAddressLine1">King Fahd Road, Al Olaya District,</p>
+                <p class="leading-relaxed" data-i18n="footerAddressLine2">Riyadh 12241, Kingdom of Saudi Arabia</p>
+              </div>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="flex items-start gap-3">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366" class="shrink-0 mt-0.5">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              <div>
+                <div class="text-white font-bold text-xs mb-1">WhatsApp</div>
+                <a href="https://wa.me/966114567890" target="_blank" class="hover:text-[#25D366] transition-colors" dir="ltr">+966 11 456 7890</a>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="flex items-start gap-3">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8976C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 mt-0.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <div>
+                <div class="text-white font-bold text-xs mb-1" data-i18n="footerPhoneLabel">Phone</div>
+                <a href="tel:+966114567890" class="hover:text-white transition-colors" dir="ltr">+966 11 456 7890</a>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-start gap-3">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8976C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 mt-0.5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <div>
+                <div class="text-white font-bold text-xs mb-1">Email</div>
+                <a href="mailto:hospitality@waynscafe.sa" class="hover:text-white transition-colors">hospitality@waynscafe.sa</a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ZATCA badge -->
+          <div class="flex items-center gap-2 text-[11px] text-gray-400 pt-1">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#B8976C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span data-i18n="footerTax">ZATCA e-Invoice Certified</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar — Copyright only, no Privacy/Terms, no CR/VAT -->
+      <div class="pt-8 text-center text-xs text-gray-400">
+        <p data-i18n="footerCopyright">
+          © 2026 Wayns Coffee (ونس كافيه) All Rights Reserved.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= APP-STYLE MOBILE BOTTOM NAVIGATION BAR (Warm Luxury Pure Icons) ================= -->
+  <nav class="fixed bottom-0 inset-x-0 z-40 bg-[#FAF7F2]/95 backdrop-blur-xl border-t border-[#04300d]/12 py-2 px-4 md:hidden shadow-[0_-8px_30px_rgba(4, 48, 13,0.08)]">
+    <div class="flex justify-around items-center max-w-md mx-auto">
+      <!-- Home -->
+      <a href="index.html" class="flex flex-col items-center justify-center gap-1 text-[#526055] hover:text-[#04300d] transition-colors py-1 px-3 group">
+        <i data-lucide="house" class="w-5 h-5 stroke-[1.75] group-hover:text-[#04300d]"></i>
+        <span class="text-[10px] font-medium tracking-tight" data-i18n="bottomHome">Home</span>
+      </a>
+
+      <!-- Menu (Active) -->
+      <a href="menu.html" class="flex flex-col items-center justify-center gap-1 text-[#04300d] transition-colors py-1 px-3">
+        <i data-lucide="coffee" class="w-5 h-5 stroke-[2]"></i>
+        <span class="text-[10px] font-bold tracking-tight text-[#04300d]" data-i18n="bottomMenu">Menu</span>
+      </a>
+
+      <!-- Branch -->
+      <a href="branch.html" class="flex flex-col items-center justify-center gap-1 text-[#526055] hover:text-[#04300d] transition-colors py-1 px-3 group">
+        <i data-lucide="store" class="w-5 h-5 stroke-[1.75] group-hover:text-[#04300d]"></i>
+        <span class="text-[10px] font-medium tracking-tight" data-i18n="bottomBranch">Branch</span>
+      </a>
+
+      <!-- Location -->
+      <a href="location.html" class="flex flex-col items-center justify-center gap-1 text-[#526055] hover:text-[#04300d] transition-colors py-1 px-3 group">
+        <i data-lucide="map-pin" class="w-5 h-5 stroke-[1.75] group-hover:text-[#04300d]"></i>
+        <span class="text-[10px] font-medium tracking-tight" data-i18n="bottomLocation">Location</span>
+      </a>
+
+      <!-- Contact -->
+      <a href="contact.html" class="flex flex-col items-center justify-center gap-1 text-[#526055] hover:text-[#04300d] transition-colors py-1 px-3 group">
+        <i data-lucide="phone" class="w-5 h-5 stroke-[1.75] group-hover:text-[#04300d]"></i>
+        <span class="text-[10px] font-medium tracking-tight" data-i18n="bottomContact">Contact</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- JavaScript Bundle -->
+  <script src="app.js"></script>
+
+</body>
+</html>

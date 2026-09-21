@@ -1,0 +1,269 @@
+/* ==========================================================================
+   WAYNS COFFEE - ROYAL ARTISANAL SAUDI ARABIA SPECIALTY COFFEE
+   Luxury Visual Foundation:
+   - Base Canvas: Warm Artisanal Ivory / Crema (#FAF7F2)
+   - Elevating Surfaces: Crisp Pure White (#FFFFFF) & Warm Crema (#F4EFEA)
+   - Primary Accent: Deep Imperial Saudi Emerald (#04300d)
+   - Secondary Accent: Rich Forest (#234827) & Deep Roast (#0C1A0E)
+   - Warm Subtle Accents: Cardamom Bronze (#B8976C)
+   - Icons: Clean, elegant, delicate stroke vectors (NO bulky boxes)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --color-canvas: #FAF7F2;
+  --color-surface: #FFFFFF;
+  --color-crema: #F4EFEA;
+  --color-crema-soft: #FAF8F5;
+  --color-sand: #EAE5DC;
+  
+  --color-primary: #04300d;
+  --color-primary-dark: #0C1A0E;
+  --color-primary-light: #234827;
+  --color-primary-soft: rgba(4, 48, 13, 0.05);
+  
+  --color-accent-bronze: #B8976C;
+  --color-border-subtle: rgba(4, 48, 13, 0.08);
+  --color-border-warm: #EAE5DC;
+  
+  --color-text-main: #141C15;
+  --color-text-muted: #526055;
+}
+
+/* Base Body Styles */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-canvas);
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--color-canvas);
+  color: var(--color-text-main);
+  overflow-x: hidden;
+  transition: direction 0.3s ease;
+}
+
+/* Arabic Mode Typography */
+html[lang="ar"] body {
+  font-family: 'Cairo', sans-serif;
+}
+
+html[lang="ar"] .font-serif,
+html[lang="ar"] .font-brand {
+  font-family: 'Amiri', serif;
+}
+
+.font-serif,
+.font-heading {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+/* ==========================================================================
+   CARDS & SURFACES - REFINED LUXURY DEPTH
+   ========================================================================== */
+.card-premium {
+  background: #FFFFFF;
+  border: 1px solid rgba(4, 48, 13, 0.08);
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 30px -5px rgba(4, 48, 13, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-premium:hover {
+  border-color: rgba(4, 48, 13, 0.18);
+  box-shadow: 0 20px 40px -10px rgba(4, 48, 13, 0.1), 0 4px 12px rgba(0, 0, 0, 0.03);
+  transform: translateY(-3px);
+}
+
+.surface-crema {
+  background-color: var(--color-crema);
+  border: 1px solid var(--color-sand);
+}
+
+/* ==========================================================================
+   BUTTONS - REFINED LUXURY
+   ========================================================================== */
+.btn-gold {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(4, 48, 13, 0.16);
+}
+
+.btn-gold:hover {
+  background-color: var(--color-primary-light);
+  color: #FFFFFF;
+  box-shadow: 0 8px 22px rgba(4, 48, 13, 0.25);
+  transform: translateY(-2px);
+}
+
+.btn-outline-gold {
+  border: 1.5px solid rgba(4, 48, 13, 0.2);
+  color: var(--color-primary);
+  background-color: #FFFFFF;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(4, 48, 13, 0.04);
+}
+
+.btn-outline-gold:hover {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(4, 48, 13, 0.16);
+}
+
+/* Glass Panels with Warm Tint */
+.glass-panel {
+  background: rgba(250, 247, 242, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(4, 48, 13, 0.08);
+}
+
+/* Smooth Transitions */
+.transition-luxury {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C4BEB4;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Direction aware flip */
+[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}
+
+/* Saudi Riyal Currency Symbol */
+.riyal-symbol {
+  display: inline-block;
+  height: 0.9em;
+  width: auto;
+  vertical-align: -0.05em;
+  margin-inline-start: 0.25rem;
+  object-fit: contain;
+}
+
+/* ==========================================================================
+   HERO RESPONSIVE BACKGROUND — DESKTOP ONLY
+   Mobile hero uses its own <section> with inline style.
+   ========================================================================== */
+.hero-dual-bg {
+  background-color: #FAF7F2;
+  background-image: url('hero_section_image.png');
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: cover;
+}
+
+
+
+/* ==========================================================================
+   HERO CATEGORY ICON ANIMATIONS
+   ========================================================================== */
+
+/* ── Coffee: steam lines float upward ── */
+@keyframes steamRise {
+  0%   { transform: translateY(0px);  opacity: 1;   }
+  60%  { transform: translateY(-5px); opacity: 0.5; }
+  100% { transform: translateY(-9px); opacity: 0;   }
+}
+.icon-coffee .steam-line {
+  animation: steamRise 1.6s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+.icon-coffee .steam-line:nth-child(3) { animation-delay: 0s; }
+.icon-coffee .steam-line:nth-child(4) { animation-delay: 0.3s; }
+.icon-coffee .steam-line:nth-child(5) { animation-delay: 0.6s; }
+
+/* ── Sweets: gentle bob up-down ── */
+@keyframes sweetsBob {
+  0%, 100% { transform: translateY(0px);  }
+  50%       { transform: translateY(-4px); }
+}
+.icon-sweets {
+  animation: sweetsBob 1.8s ease-in-out infinite;
+}
+
+/* ── Tea: gentle teacup sway + teabag dip animation ── */
+@keyframes teaDip {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-3px) rotate(3deg); }
+}
+@keyframes teaBagDip {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(2.5px); }
+}
+.icon-tea {
+  animation: teaDip 2s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+.icon-tea .tea-tag {
+  animation: teaBagDip 1.5s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+/* ==========================================================================
+   TEA & COFFEE SPECIALIST MARQUEE RIBBON
+   LTR: Right-to-Left scroll
+   RTL (Arabic): Left-to-Right scroll
+   ========================================================================== */
+@keyframes marqueeLTR {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marqueeRTL {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.specialist-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeLTR 22s linear infinite;
+  will-change: transform;
+}
+
+html[dir="rtl"] .specialist-marquee-track {
+  animation: marqueeRTL 22s linear infinite;
+}
+
+.specialist-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbar for carousel swipe */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
