@@ -2,17 +2,8 @@
   "name": "wayns-coffee",
   "version": "1.0.0",
   "description": "Wayns Coffee - Luxury Saudi Specialty Coffee Website",
-  "main": "index.html",
   "scripts": {
-    "start": "npx serve ."
-  },
-  "keywords": [
-    "coffee",
-    "saudi-arabia",
-    "riyadh",
-    "specialty-coffee",
-    "luxury"
-  ],
-  "author": "Wayns Coffee",
-  "license": "MIT"
+    "build": "echo 'Static build complete'",
+    "start": "node server.js"
+  }
 }
