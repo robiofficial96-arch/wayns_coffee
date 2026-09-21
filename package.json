@@ -1,9 +1,0 @@
-{
-  "name": "wayns-coffee",
-  "version": "1.0.0",
-  "description": "Wayns Coffee - Luxury Saudi Specialty Coffee Website",
-  "scripts": {
-    "build": "echo 'Static build complete'",
-    "start": "node server.js"
-  }
-}
